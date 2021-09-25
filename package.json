@@ -1,0 +1,23 @@
+{
+	"name": "bee-house",
+	"description": "An interactive commenting tool for the Bee Movie script.",
+	"version": "1.0.0",
+	"main": "./src/index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/haykam821/Bee-House.git"
+	},
+	"keywords": [
+		"reddit",
+		"comment"
+	],
+	"author": "haykam821",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/haykam821/Bee-House/issues"
+	},
+	"homepage": "https://github.com/haykam821/Bee-House#readme"
+}
