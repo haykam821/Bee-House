@@ -18,6 +18,11 @@ class CommentsSocket extends Socket {
 }
 module.exports = CommentsSocket;
 
+/**
+ * Gets the comments socket URL for a post by its ID.
+ * @param {string} postId The post ID to get the comments socket URL for.
+ * @returns {Promise<string>} A promise resolving to the comments socket URL.
+ */
 async function getCommentsSocketUrl(postId) {
 	log("getting socket url for post '%s'", postId);
 

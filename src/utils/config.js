@@ -2,6 +2,10 @@ const { cosmiconfig } = require("cosmiconfig");
 
 const { configuration: log } = require("./log.js");
 
+/**
+ * Loads a config.
+ * @returns {Object} The loaded config.
+ */
 async function getConfig() {
 	const explorer = cosmiconfig("beehouse", {
 		searchPlaces: [

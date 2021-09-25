@@ -1,5 +1,9 @@
 const debug = require("debug");
 
+/**
+ * Creates and enables a logger with a given path.
+ * @param {string} path The path of the logger.
+ */
 function createLogger(path) {
 	const logger = debug("beescript:" + path);
 	logger.enabled = true;

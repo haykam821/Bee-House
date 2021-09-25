@@ -5,6 +5,11 @@ const CommentsSocket = require("./socket/comments.js");
 const StatusSocket = require("./socket/status.js");
 const readline = require("readline");
 
+/**
+ * Parses a comment ID, adding `t1_` if necessary.
+ * @param {string} id The comment ID to parse.
+ * @returns {string} The parsed comment ID.
+ */
 function parseCommentId(id) {
 	if (id.startsWith("t1_")) {
 		return id;
@@ -96,10 +101,12 @@ class BeeHouseApp {
 
 		const response = await got.post("https://oauth.reddit.com/api/comment.json", {
 			form: {
+				/* eslint-disable camelcase */
 				api_type: "json",
 				return_rtjson: true,
 				text: body,
 				thing_id: parent,
+				/* eslint-enable camelcase */
 			},
 			headers: {
 				Authorization: this.config.token,

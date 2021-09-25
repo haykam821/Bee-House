@@ -6,6 +6,11 @@ const doneColor = chalk.blueBright;
 const caretColor = chalk.yellowBright;
 const caret = caretColor("ʌ");
 
+/**
+ * Logs status data with a logger.
+ * @param {debug.Debugger} logger The logger to log with.
+ * @param {Object} json The JSON data.
+ */
 function statusLog(logger, json) {
 	logger(doneColor(json.lastWritten + " ") + caret + " " + json.firstRemaining);
 }
